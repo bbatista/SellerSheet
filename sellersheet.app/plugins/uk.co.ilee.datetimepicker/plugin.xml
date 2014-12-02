@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="uk.co.ilee.datetimepicker" version="0.4.1">
+    <name>Date / Time Picker</name>
+    <author>Lee Crossley (http://ilee.co.uk/), based on the plugin by Jaakko Santala</author>
+    <description>Cordova Date Time Picker Plugin to utilise the native Windows Phone 8 toolkit date and time selectors.</description>
+    <keywords>cordova, date, time, datetime, picker, wp8, wptoolkit</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <js-module src="www/datetimepicker.js" name="DateTimePicker">
+        <clobbers target="datetimepicker" />
+    </js-module>
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DateTimePicker">
+                <param name="wp-package" value="DateTimePicker"/>
+            </feature>
+        </config-file>
+        <source-file src="src/DateTimePicker.cs"/>
+        <source-file src="src/DateTimePickerTask.cs"/>
+    </platform>
+</plugin>

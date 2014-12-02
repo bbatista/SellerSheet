@@ -1,0 +1,210 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css">
+    <link rel="stylesheet" href="css/seller-sheet.css">
+
+	<script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/onsen/js/onsenui.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	
+	<script src="js/SellerSheet.js"></script>
+	<script src="js/SheetCalculator.js"></script>
+	<script type="text/javascript" language="javascript">
+	
+	var sheet = new SellerSheet();
+	var daysData = [];
+	var currentDaySetup;
+	
+	function startWeek(target, bestTarget, daysOff) {
+		sheet.initialize(target, bestTarget, daysOff);
+		render();
+	}
+	
+	function loadUserData() {
+		sheet.loadData();
+		render();
+	}
+
+	function saveUserData() {
+		sheet.saveData();
+	}
+	
+	function render() {
+		daysData = [];
+		if (sheet.data != undefined) {
+			$("#weekTarget").text(sheet.data.minTarget);
+			$("#weekBestTarget").text(sheet.data.bestTarget);
+			for (var day = 0; day < sheet.weekDays.length;day++) {
+				var data = sheet.data[sheet.weekDays[day]];
+				/*$("#target"+day).text(data.minTarget);
+				$("#best"+day).text(data.bestTarget);
+				$("#sold"+day).text(data.soldValue);*/
+				daysData.push({ 'index':day,
+								'name':sheet.weekDays[day], 
+								'target': data.minTarget != undefined ? data.minTarget : 0, 
+								'best':data.bestTarget != undefined ? data.bestTarget : 0, 
+								'sold':data.soldValue != undefined ? data.soldValue : 0});
+			}
+		}
+	}
+	
+	function setSoldDay(day, value) {
+		sheet.setSoldValue(day, value);
+		saveUserData();
+		render();
+	}
+	
+	
+	function setDay(value){
+	
+		sheet.setSoldValue(daysData[currentDaySetup].name, value);
+		render();
+		var scope = angular.element(document.getElementById("dayList")).scope();
+		scope.days = daysData;
+		scope.$apply();
+		nav.popPage();
+	}
+	
+	function showDaySetup(day) {
+		currentDaySetup = day;
+		if (daysData[day].sold == "")
+			nav.pushPage("day_setup", {animation: 'slide'});
+	}
+	
+	function goBack() {
+		if (nav.getPages().length > 1)
+			nav.popPage();
+	}
+	
+	
+	function showDateCtrl() {
+		 // Same handling for iPhone and Android
+		window.plugins.datePicker.show({
+			date : myNewDate,
+			mode : 'date', // date or time or blank for both
+			allowOldDates : true
+		}, function(returnDate) {
+			var newDate = new Date(returnDate);
+			currentField.val(newDate.toString("dd/MMM/yyyy"));
+
+			// This fixes the problem you mention at the bottom of this script with it not working a second/third time around, because it is in focus.
+			currentField.blur();
+		});
+	}
+	
+	ons.bootstrap()
+	.controller("listController", function ($scope ) {
+		$scope.days = daysData;
+	});
+	startWeek(10000,15000,[0,6]);
+	//loadUserData();
+	</script>
+	
+</head>
+<body>
+
+
+<ons-tabbar>
+      <ons-tab page="week_page" active="true">
+        <ons-icon icon="ion-ios7-calendar" style="font-size: 28px; vertical-align: -4px;"></ons-icon>
+      </ons-tab>
+
+    <!--  <ons-tab page="week_page">
+        <ons-icon icon="ion-ios7-people" style="font-size: 28px; vertical-align: -4px;"></ons-icon>
+      </ons-tab>
+	-->
+      <ons-tab page="week_setup">
+        <ons-icon icon="ion-gear-a" style="font-size: 28px; vertical-align: -4px;"></ons-icon>
+      </ons-tab>
+</ons-tabbar>
+
+<!-- Setting the week up-->
+<ons-template id="week_setup">
+      <div class="settings-header">Configura&ccedil;&otilde;es da semana</div>
+	<ons-list modifier="inset" class="settings-list">
+		<ons-list-item>
+			Cota
+			<input type="number" id="target" ng-model="text" placeholder="Cota"/>
+		</ons-list-item>
+		<ons-list-item>
+			Super
+			<input type="number" id="best" ng-model="text" placeholder="Super"/>
+		</ons-list-item>
+		<ons-list-item>
+			15 dias
+				<ons-switch id="15_days_period modifier="list-item" checked></ons-switch>
+		</ons-list-item>
+	</ons-list>
+	
+</ons-template>
+
+<!-- Setting the sold value of the day -->
+<ons-template id="day_setup">
+<label for="sold" class="day_setup_title">Informe o valor vendido hoje:</label>
+<input id="sold" type="number" placeholder="Valor" patter="[0-9]+,[0-9]{2}" class="text-input text-input--transparent" style="margin-top:8px; width: 100%;">
+<ons-button onclick="setDay($('#sold').val())" class="day_setup_accept">Ok</ons-button>
+
+</ons-template>
+
+<!-- Show the day list -->
+<ons-template id="week_page">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+			<ons-back-button onclick="goBack()"></on-back-button>
+          </div>
+          <div class="center">
+            Per&iacute;odo de Venda
+          </div>
+          <div class="right">
+            
+          </div>
+        </ons-toolbar>
+
+		<ons-navigator var="nav">
+			<ons-list id="dayList" class="plan-list" ng-controller="listController">
+          <ons-list-item modifier="chevron" class="plan" ng-repeat="day in days" onclick="showDaySetup($(this).find('input').eq(0).val())">
+            <ons-row>
+			<input type="hidden" value="{{day.index}}"/>
+              <ons-col width="80px" class="plan-left">
+                <div class="plan-date">24</div>
+               <div class="plan-date">Dezembro</div>
+              </ons-col>
+
+              <ons-col width="6px" class="plan-center" ng-style="{backgroundColor:{{day.index}} % 2 == 1 ? '#3399ff' : '#ccc'}">
+              </ons-col>
+
+              <ons-col class="plan-right">
+                <div class="plan-name">{{day.name}}</div>
+
+                <div class="plan-info">
+                  <div>
+                    <ons-icon icon="fa-phone"></ons-icon>R$ {{day.target}}
+                  </div>
+				  <div>
+                    <ons-icon icon="fa-phone"></ons-icon>R$ {{day.best}}
+                  </div>
+				  <div>
+                    <ons-icon icon="fa-phone"></ons-icon>R$ {{day.sold}}
+                  </div>
+
+                  
+                </div>
+              </ons-col>
+				
+            </ons-row>
+          </ons-list-item>
+
+        </ons-list>
+		</ons-navigator>
+
+
+      </ons-page>
+    </ons-template>
+
+
+</body>
+</html>
