@@ -58,6 +58,9 @@ function startWeek(target, bestTarget, daysOff) {
 		nav.popPage();
 	}
 	
+
+	// ******** Navigation functions
+
 	function showDaySetup(day) {
 		currentDaySetup = day;
 		if (daysData[day].sold == "")
@@ -69,6 +72,7 @@ function startWeek(target, bestTarget, daysOff) {
 			nav.popPage();
 	}
 	
+	// ******** Interface configurations ( bootstrap, controllers )
 	$(document).on('ons-switch:init', '#days_period', function(event) {
 		event.target.checked = weekInfo.longPeriod;
 	});
