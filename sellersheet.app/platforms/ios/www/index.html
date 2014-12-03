@@ -13,18 +13,11 @@
 	<script src="js/SellerSheet.js"></script>
 	<script src="js/SheetCalculator.js"></script>
 	<script src="js/app.js"></script>
-	<script type="text/javascript" language="javascript">
-	
-
-	startWeek(10000,15000,[0,6]);
-	//loadUserData();
-	</script>
-	
 </head>
 <body>
 
 
-<ons-tabbar>
+<ons-tabbar var="tabCtrl">
       <ons-tab page="week_page" active="true">
         <ons-icon icon="ion-ios7-calendar" style="font-size: 28px; vertical-align: -4px;"></ons-icon>
       </ons-tab>
@@ -41,7 +34,7 @@
 	<ons-list modifier="inset" class="settings-list">
 		<ons-list-item>
 			<ons-icon icon="ion-ios7-play" style="padding-right:10px"></ons-icon>
-			<input type="number" id="minTarget" placeholder="Cota" class="text-input list-item-textbox" value="{{weekInfo.minTarget}}"/>
+			<input type="text" id="normalTarget" placeholder="Cota" class="text-input list-item-textbox" value="{{weekInfo.normalTarget}}"/>
 		</ons-list-item>
 		<ons-list-item>
 		<ons-icon icon="ion-ios7-fastforward" ></ons-icon>
@@ -49,15 +42,15 @@
 		</ons-list-item>
 		<ons-list-item>
 			15 dias
-				<ons-switch id="days_period" modifier="list-item"></ons-switch>
+				<ons-switch id="longPeriod" modifier="list-item" var="longPeriodCtrl"></ons-switch>
 		</ons-list-item>
 		<ons-list-item>
 			<label for="start_date" class="settings-label">Dia In&iacute;cio:</label>
-			<input type="date" placeholder="Date" class="textbox=n list-item-textbox" id="start_date" value="{{weekInfo.startDate}}"/>
+			<input type="date" placeholder="Date" class="textbox=n list-item-textbox" id="startDate"/>
 		</ons-list-item>
 	</ons-list>
 	<div style="padding: 10px 9px">
-        <ons-button modifier="large" style="margin: 0 auto;">
+        <ons-button modifier="large" style="margin: 0 auto;" onclick="startWeek()">
           Aplicar
         </ons-button>
       </div>
@@ -91,29 +84,29 @@
 
 		<ons-navigator var="nav">
 			<ons-list id="dayList" class="plan-list" ng-controller="listController">
-          <ons-list-item modifier="chevron" class="plan" ng-repeat="day in days" onclick="showDaySetup($(this).find('input').eq(0).val())">
+          <ons-list-item modifier="chevron" class="plan" ng-repeat="target in targets" onclick="showDaySetup($(this).find('input').eq(0).val())">
             <ons-row>
-			<input type="hidden" value="{{day.index}}"/>
+			<input type="hidden" value="{{target.index}}"/>
               <ons-col width="80px" class="plan-left">
-                <div class="plan-date">24</div>
-               <div class="plan-date">Dezembro</div>
+			  <div class="plan-date">{{target.monthDay}}</div>
+			  <div class="plan-date">{{target.month}}</div>
               </ons-col>
 
-              <ons-col width="6px" class="plan-center" ng-style="{backgroundColor:{{day.index}} % 2 == 1 ? '#3399ff' : '#ccc'}">
+              <ons-col width="6px" class="plan-center" ng-style="{backgroundColor:2 % 2 == 1 ? '#3399ff' : '#ccc'}">
               </ons-col>
 
               <ons-col class="plan-right">
-                <div class="plan-name">{{day.name}}</div>
+                <div class="plan-name">{{target.day}}</div>
 
                 <div class="plan-info">
                   <div>
-                    <ons-icon icon="ion-ios7-play" style="padding-right:12px"></ons-icon>R$ {{day.target}}
+                    <ons-icon icon="ion-ios7-play" style="padding-right:12px"></ons-icon>R$ {{target.normal}}
                   </div>
 				  <div>
-                    <ons-icon icon="ion-ios7-fastforward" style="padding-right:6px"></ons-icon>R$ {{day.best}}
+                    <ons-icon icon="ion-ios7-fastforward" style="padding-right:6px"></ons-icon>R$ {{target.best}}
                   </div>
 				  <div>
-                    <ons-icon icon="ion-social-usd" style="padding-right:10px"></ons-icon>R$ {{day.sold}}
+                    <ons-icon icon="ion-social-usd" style="padding-right:10px"></ons-icon>R$ {{target.sold}}
                   </div>
 
                   
@@ -130,6 +123,11 @@
       </ons-page>
     </ons-template>
 
+	<ons-template id="no_data">
+		<ons-page>
+			NAO TEM INFORMACAO
+		</ons-page>
+	</ons-template>
 
 </body>
 </html>

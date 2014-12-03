@@ -8,6 +8,7 @@ function SheetCalculator(normalTarget, bestTarget, startDay, totalDays, daysOff)
 
 	// constants to help
 	this.daysName = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+	this.months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
 	this.normalTarget = normalTarget;
 	this.bestTarget = bestTarget;
@@ -61,6 +62,9 @@ SheetCalculator.prototype.getSheetData = function() {
 	var targets = [];
 	for (var i=0;i<this.totalDays;i++) {
 		var target = {};
+		target.index = i;
+		target.monthDay = this.normalDailyTargets[i].date.getDate();
+		target.month = this.months[this.normalDailyTargets[i].date.getMonth()];
 		target.day = this.normalDailyTargets[i].day;
 		target.date = this.normalDailyTargets[i].date;
 		target.normal = this.normalDailyTargets[i].value;
