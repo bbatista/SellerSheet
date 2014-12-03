@@ -20,7 +20,7 @@ function SellerSheet() {
 // function to start the week
 SellerSheet.prototype.initialize = function(minTarget, bestTarget, daysOff) {
 
-	if (this.data == undefined ) this.data = {};
+	
 	// set the configuration
 	this.data.minTarget = minTarget;
 	this.data.bestTarget = bestTarget;

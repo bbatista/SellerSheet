@@ -12,93 +12,10 @@
 	
 	<script src="js/SellerSheet.js"></script>
 	<script src="js/SheetCalculator.js"></script>
+	<script src="js/app.js"></script>
 	<script type="text/javascript" language="javascript">
 	
-	var sheet = new SellerSheet();
-	var daysData = [];
-	var currentDaySetup;
-	
-	function startWeek(target, bestTarget, daysOff) {
-		sheet.initialize(target, bestTarget, daysOff);
-		render();
-	}
-	
-	function loadUserData() {
-		sheet.loadData();
-		render();
-	}
 
-	function saveUserData() {
-		sheet.saveData();
-	}
-	
-	function render() {
-		daysData = [];
-		if (sheet.data != undefined) {
-			$("#weekTarget").text(sheet.data.minTarget);
-			$("#weekBestTarget").text(sheet.data.bestTarget);
-			for (var day = 0; day < sheet.weekDays.length;day++) {
-				var data = sheet.data[sheet.weekDays[day]];
-				/*$("#target"+day).text(data.minTarget);
-				$("#best"+day).text(data.bestTarget);
-				$("#sold"+day).text(data.soldValue);*/
-				daysData.push({ 'index':day,
-								'name':sheet.weekDays[day], 
-								'target': data.minTarget != undefined ? data.minTarget : 0, 
-								'best':data.bestTarget != undefined ? data.bestTarget : 0, 
-								'sold':data.soldValue != undefined ? data.soldValue : 0});
-			}
-		}
-	}
-	
-	function setSoldDay(day, value) {
-		sheet.setSoldValue(day, value);
-		saveUserData();
-		render();
-	}
-	
-	
-	function setDay(value){
-	
-		sheet.setSoldValue(daysData[currentDaySetup].name, value);
-		render();
-		var scope = angular.element(document.getElementById("dayList")).scope();
-		scope.days = daysData;
-		scope.$apply();
-		nav.popPage();
-	}
-	
-	function showDaySetup(day) {
-		currentDaySetup = day;
-		if (daysData[day].sold == "")
-			nav.pushPage("day_setup", {animation: 'slide'});
-	}
-	
-	function goBack() {
-		if (nav.getPages().length > 1)
-			nav.popPage();
-	}
-	
-	
-	function showDateCtrl() {
-		 // Same handling for iPhone and Android
-		window.plugins.datePicker.show({
-			date : myNewDate,
-			mode : 'date', // date or time or blank for both
-			allowOldDates : true
-		}, function(returnDate) {
-			var newDate = new Date(returnDate);
-			currentField.val(newDate.toString("dd/MMM/yyyy"));
-
-			// This fixes the problem you mention at the bottom of this script with it not working a second/third time around, because it is in focus.
-			currentField.blur();
-		});
-	}
-	
-	ons.bootstrap()
-	.controller("listController", function ($scope ) {
-		$scope.days = daysData;
-	});
 	startWeek(10000,15000,[0,6]);
 	//loadUserData();
 	</script>
@@ -111,11 +28,6 @@
       <ons-tab page="week_page" active="true">
         <ons-icon icon="ion-ios7-calendar" style="font-size: 28px; vertical-align: -4px;"></ons-icon>
       </ons-tab>
-
-    <!--  <ons-tab page="week_page">
-        <ons-icon icon="ion-ios7-people" style="font-size: 28px; vertical-align: -4px;"></ons-icon>
-      </ons-tab>
-	-->
       <ons-tab page="week_setup">
         <ons-icon icon="ion-gear-a" style="font-size: 28px; vertical-align: -4px;"></ons-icon>
       </ons-tab>
@@ -123,22 +35,32 @@
 
 <!-- Setting the week up-->
 <ons-template id="week_setup">
+<div ng-controller="weekSetupController">
       <div class="settings-header">Configura&ccedil;&otilde;es da semana</div>
 	<ons-list modifier="inset" class="settings-list">
 		<ons-list-item>
-			Cota
-			<input type="number" id="target" ng-model="text" placeholder="Cota"/>
+			<ons-icon icon="ion-ios7-play" style="padding-right:10px"></ons-icon>
+			<input type="number" id="minTarget" placeholder="Cota" class="text-input list-item-textbox" value="{{weekInfo.minTarget}}"/>
 		</ons-list-item>
 		<ons-list-item>
-			Super
-			<input type="number" id="best" ng-model="text" placeholder="Super"/>
+		<ons-icon icon="ion-ios7-fastforward" ></ons-icon>
+			<input type="number" id="bestTarget" placeholder="Super" class="text-input list-item-textbox" value="{{weekInfo.bestTarget}}"/>
 		</ons-list-item>
 		<ons-list-item>
 			15 dias
-				<ons-switch id="15_days_period modifier="list-item" checked></ons-switch>
+				<ons-switch var="longPeriodCtrl" id="15_days_period" modifier="list-item" {{weekInfo.longPeriodChecked}}></ons-switch>
+		</ons-list-item>
+		<ons-list-item>
+			<label for="start_date" class="settings-label">Dia In&iacute;cio:</label>
+			<input type="date" class="text-input list-item-textbox" id="start_date" value="{{weekInfo.startDate}}"/>
 		</ons-list-item>
 	</ons-list>
-	
+	<div style="padding: 10px 9px">
+        <ons-button modifier="large" style="margin: 0 auto;">
+          Aplicar
+        </ons-button>
+      </div>
+</div>
 </ons-template>
 
 <!-- Setting the sold value of the day -->
@@ -182,13 +104,13 @@
 
                 <div class="plan-info">
                   <div>
-                    <ons-icon icon="fa-phone"></ons-icon>R$ {{day.target}}
+                    <ons-icon icon="ion-ios7-play" style="padding-right:12px"></ons-icon>R$ {{day.target}}
                   </div>
 				  <div>
-                    <ons-icon icon="fa-phone"></ons-icon>R$ {{day.best}}
+                    <ons-icon icon="ion-ios7-fastforward" style="padding-right:6px"></ons-icon>R$ {{day.best}}
                   </div>
 				  <div>
-                    <ons-icon icon="fa-phone"></ons-icon>R$ {{day.sold}}
+                    <ons-icon icon="ion-social-usd" style="padding-right:10px"></ons-icon>R$ {{day.sold}}
                   </div>
 
                   
