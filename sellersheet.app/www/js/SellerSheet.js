@@ -34,7 +34,10 @@ SellerSheet.prototype.loadData = function() {
 	var dataString = localStorage.getItem("seller_sheet");
 	if (dataString != "") {
 		this.data = JSON.parse(dataString);
+		return true;
 	}
+
+	return false;
 }
 
 SellerSheet.prototype._recalculate = function(fromDay) {
@@ -43,14 +46,14 @@ SellerSheet.prototype._recalculate = function(fromDay) {
 	var passedDays = [];
 	
 	// first, calculate the already sold amount
-	for (var day = fromDay;day<this.data.totalDays;day++) {
+	for (var day = 0;day<fromDay;day++) {
 		totalSold += parseInt(this.data.targets[day].sold);
 	}
 	
 	// calculates the rest of the week
 	var calculator = new SheetCalculator(parseInt(this.data.normalTarget)-totalSold,
 		   								parseInt(this.data.bestTarget)-totalSold,
-										this.data.targets[fromDay].date, this.data.totalDays - (fromDay+1), []); //TODO: recalculate with the days off
+										this.data.targets[fromDay].date, this.data.totalDays - fromDay, []); //TODO: recalculate with the days off
 	var newSheet = calculator.getSheetData();
 	
 	//redistribute the values
