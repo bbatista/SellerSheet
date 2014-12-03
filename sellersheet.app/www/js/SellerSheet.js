@@ -19,7 +19,7 @@ SellerSheet.prototype.initialize = function(normalTarget, bestTarget, startDay, 
 // set the sold value of the day and reconfigure the missing fields
 SellerSheet.prototype.setSoldValue = function(day, value) {
 		
-	this.data.targets[day].value = value;
+	this.data.targets[day].sold = value;
 	this._recalculate(day+1);
 }
 
@@ -55,7 +55,7 @@ SellerSheet.prototype._recalculate = function(fromDay) {
 	
 	//redistribute the values
 	var i = 0;
-	for (var day = fromDay;day<this.data.totalDays;day++) {
+	for (var day = fromDay;day<this.data.totalDays-1;day++) {
 		this.data.targets[day] = newSheet.targets[i];
 		i++;
 	}
