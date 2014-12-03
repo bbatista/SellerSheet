@@ -7,7 +7,7 @@ function SheetCalculator(normalTarget, bestTarget, startDay, totalDays, daysOff)
 	if (daysOff instanceof Array === false)	throw "The param daysOff must be of type Array";
 
 	// constants to help
-	this.daysName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+	this.daysName = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
 
 	this.normalTarget = normalTarget;
 	this.bestTarget = bestTarget;
@@ -21,7 +21,7 @@ function SheetCalculator(normalTarget, bestTarget, startDay, totalDays, daysOff)
 SheetCalculator.prototype._calculateDailyTargets = function (target) {
 
 	var targetValues = [];
-	var currentDate = this.startDay;
+	var currentDate = new Date(this.startDay);
 	var proportion = 0;
 
 	// fill the proportion and the days
@@ -56,33 +56,6 @@ SheetCalculator.prototype._calculateDailyTargets = function (target) {
 	return targetValues;
 }
 
-SheetCalculator.prototype._calculateDailyTargets_deprecated = function(weekTarget, daysOff) {
-	
-	if (daysOff instanceof Array === false)	throw "The param daysOff must be of type Array";
-	
-	var daysName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-	var dayWeight = [3,2,2,2,2,2,3]; // proportion of each day
-	var daysToWork = 7 - daysOff.length;
-	var dailyTarget = {};
-	
-	var proportion = 0;
-	// for each day in the week
-	for (var day = 0;day<7;day++) {
-		if (daysOff.indexOf(day) == -1) { // if is not a day off
-			proportion += dayWeight[day];
-		}
-	}
-	proportion = weekTarget/proportion;
-	
-	for (var day = 0;day<7;day++) {
-		if (daysOff.indexOf(day) == -1 ) { // if is not a day off
-			var value = Math.ceil(dayWeight[day]*proportion);
-			dailyTarget[daysName[day]] = value > 0 ? value : 0;
-		}
-	}
-	return dailyTarget;
-}
-
 SheetCalculator.prototype.getSheetData = function() {
 
 	var targets = [];
@@ -92,6 +65,7 @@ SheetCalculator.prototype.getSheetData = function() {
 		target.date = this.normalDailyTargets[i].date;
 		target.normal = this.normalDailyTargets[i].value;
 		target.best = this.bestDailyTargets[i].value;
+		target.sold = 0;
 		targets.push(target);
 	}
 
