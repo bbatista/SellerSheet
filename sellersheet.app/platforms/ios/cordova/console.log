@@ -1,0 +1,196 @@
+2014-12-03 13:13:03.430 HelloWorld[11517:3800219] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Data/Application/B2F986CB-C979-46B4-8568-60A2A6DAB38F/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:13:04.410 HelloWorld[11517:3800219] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:13:04.410 HelloWorld[11517:3800219] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:13:04.448 HelloWorld[11517:3800219] Unlimited access to network resources
+2014-12-03 13:13:04.494 HelloWorld[11517:3800219] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:13:08.224 HelloWorld[11517:3800219] Resetting plugins due to page load.
+2014-12-03 13:13:10.038 HelloWorld[11517:3800219] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Bundle/Application/272D46EE-633F-490F-976F-B28171146634/HelloWorld.app/www/index.html
+2014-12-03 13:16:43.353 Cartela de Venda[11839:3803190] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Data/Application/68ADF9FF-1FB6-4DED-8916-3FCFF23A9A96/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:16:43.486 Cartela de Venda[11839:3803190] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:16:43.487 Cartela de Venda[11839:3803190] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:16:43.511 Cartela de Venda[11839:3803190] Unlimited access to network resources
+2014-12-03 13:16:43.525 Cartela de Venda[11839:3803190] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:16:44.087 Cartela de Venda[11839:3803190] Resetting plugins due to page load.
+2014-12-03 13:16:44.785 Cartela de Venda[11839:3803190] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Bundle/Application/40112F64-F4B7-4E2C-BBA1-8EB8A9A561D1/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 13:17:42.334 Cartela de Venda[12137:3804667] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Data/Application/1A0E1215-A8FB-44CA-8D04-B3AEF074FEBC/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:17:42.470 Cartela de Venda[12137:3804667] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:17:42.471 Cartela de Venda[12137:3804667] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:17:42.473 Cartela de Venda[12137:3804667] Unlimited access to network resources
+2014-12-03 13:17:42.482 Cartela de Venda[12137:3804667] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:17:43.048 Cartela de Venda[12137:3804667] Resetting plugins due to page load.
+2014-12-03 13:17:43.453 Cartela de Venda[12137:3804667] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Bundle/Application/79331869-3004-4F0A-A68B-6672ADB13423/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 13:24:14.355 Cartela de Venda[12536:3808559] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Data/Application/158BA1CB-A81A-4F7F-97EC-003D47E6EED6/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:24:14.505 Cartela de Venda[12536:3808559] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:24:14.505 Cartela de Venda[12536:3808559] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:24:14.507 Cartela de Venda[12536:3808559] Unlimited access to network resources
+2014-12-03 13:24:14.528 Cartela de Venda[12536:3808559] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:24:15.425 Cartela de Venda[12536:3808559] Resetting plugins due to page load.
+2014-12-03 13:24:15.990 Cartela de Venda[12536:3808559] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Bundle/Application/0D7E5850-7F35-4C00-A51F-1100EC76F14E/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 13:26:32.863 Cartela de Venda[12747:3810048] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Data/Application/C90723EB-FDDF-4AE4-8CDE-91D42C522372/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:26:32.965 Cartela de Venda[12747:3810048] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:26:32.965 Cartela de Venda[12747:3810048] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:26:32.967 Cartela de Venda[12747:3810048] Unlimited access to network resources
+2014-12-03 13:26:32.976 Cartela de Venda[12747:3810048] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:26:33.421 Cartela de Venda[12747:3810048] Resetting plugins due to page load.
+2014-12-03 13:26:33.844 Cartela de Venda[12747:3810048] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Bundle/Application/950F9139-DBE7-409F-A5A9-1FDBE297ABBB/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 13:34:01.950 Cartela de Venda[13122:3813670] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Data/Application/98CBED93-30A9-4B12-AB6B-E72F45E1AF8B/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:34:02.115 Cartela de Venda[13122:3813670] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:34:02.116 Cartela de Venda[13122:3813670] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:34:02.118 Cartela de Venda[13122:3813670] Unlimited access to network resources
+2014-12-03 13:34:02.122 Cartela de Venda[13122:3813670] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:34:02.517 Cartela de Venda[13122:3813670] Resetting plugins due to page load.
+2014-12-03 13:34:02.887 Cartela de Venda[13122:3813670] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/E8B68CE1-40D9-4F85-BA3E-9B455FC8FF4B/data/Containers/Bundle/Application/8B1EF9E6-DF04-4C7A-9DE0-71F4466FB8ED/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 13:36:13.645 Cartela de Venda[13414:3815514] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Data/Application/4DD19BB4-6E61-48A7-A9DE-D89596056997/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:36:13.927 Cartela de Venda[13414:3815514] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:36:13.927 Cartela de Venda[13414:3815514] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:36:14.096 Cartela de Venda[13414:3815514] Unlimited access to network resources
+2014-12-03 13:36:14.121 Cartela de Venda[13414:3815514] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:36:15.322 Cartela de Venda[13414:3815514] Resetting plugins due to page load.
+2014-12-03 13:36:15.857 Cartela de Venda[13414:3815514] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Bundle/Application/DAB7A505-B6C4-42B3-B550-CB826EF1F5B2/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 13:38:22.413 Cartela de Venda[13634:3816797] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Data/Application/FA146222-E966-4019-9225-D125DE8DAF0A/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:38:22.548 Cartela de Venda[13634:3816797] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:38:22.549 Cartela de Venda[13634:3816797] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:38:22.551 Cartela de Venda[13634:3816797] Unlimited access to network resources
+2014-12-03 13:38:22.555 Cartela de Venda[13634:3816797] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:38:22.937 Cartela de Venda[13634:3816797] Resetting plugins due to page load.
+2014-12-03 13:38:23.269 Cartela de Venda[13634:3816797] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Bundle/Application/C609804A-3A43-4DEB-9342-8F26DE6095F6/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 13:39:50.930 Cartela de Venda[13847:3817768] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Data/Application/0241DE84-7AB4-4F2F-8FA8-E0CA182973C1/Library/Cookies/Cookies.binarycookies
+2014-12-03 13:39:51.086 Cartela de Venda[13847:3817768] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 13:39:51.086 Cartela de Venda[13847:3817768] Multi-tasking -> Device: YES, App: YES
+2014-12-03 13:39:51.089 Cartela de Venda[13847:3817768] Unlimited access to network resources
+2014-12-03 13:39:51.094 Cartela de Venda[13847:3817768] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 13:39:51.431 Cartela de Venda[13847:3817768] Resetting plugins due to page load.
+2014-12-03 13:39:51.756 Cartela de Venda[13847:3817768] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Bundle/Application/3F50CCC6-7527-471E-8569-43178FB5DE8D/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 14:43:26.219 Cartela de Venda[15211:3841830] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Data/Application/B77A67FB-7A86-4F43-AB75-63D29BAF888B/Library/Cookies/Cookies.binarycookies
+2014-12-03 14:43:26.579 Cartela de Venda[15211:3841830] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 14:43:26.579 Cartela de Venda[15211:3841830] Multi-tasking -> Device: YES, App: YES
+2014-12-03 14:43:26.581 Cartela de Venda[15211:3841830] Unlimited access to network resources
+2014-12-03 14:43:26.614 Cartela de Venda[15211:3841830] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 14:43:27.530 Cartela de Venda[15211:3841830] Resetting plugins due to page load.
+2014-12-03 14:43:28.250 Cartela de Venda[15211:3841830] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Bundle/Application/D1A6B3B9-8277-4842-B0A7-2BD17CCE2299/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 14:44:44.156 Cartela de Venda[15429:3842910] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Data/Application/CB99529A-FD06-468A-B9A2-C7A14D11F781/Library/Cookies/Cookies.binarycookies
+2014-12-03 14:44:44.367 Cartela de Venda[15429:3842910] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 14:44:44.368 Cartela de Venda[15429:3842910] Multi-tasking -> Device: YES, App: YES
+2014-12-03 14:44:44.373 Cartela de Venda[15429:3842910] Unlimited access to network resources
+2014-12-03 14:44:44.394 Cartela de Venda[15429:3842910] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 14:44:44.970 Cartela de Venda[15429:3842910] Resetting plugins due to page load.
+2014-12-03 14:44:45.329 Cartela de Venda[15429:3842910] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Bundle/Application/4DD32801-2372-4D31-9E41-9051F9E28C05/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 14:45:26.535 Cartela de Venda[15640:3843513] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Data/Application/8BCF214E-E216-4A42-83D8-9054CF55442B/Library/Cookies/Cookies.binarycookies
+2014-12-03 14:45:26.755 Cartela de Venda[15640:3843513] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 14:45:26.755 Cartela de Venda[15640:3843513] Multi-tasking -> Device: YES, App: YES
+2014-12-03 14:45:26.757 Cartela de Venda[15640:3843513] Unlimited access to network resources
+2014-12-03 14:45:26.773 Cartela de Venda[15640:3843513] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 14:45:27.326 Cartela de Venda[15640:3843513] Resetting plugins due to page load.
+2014-12-03 14:45:27.760 Cartela de Venda[15640:3843513] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Bundle/Application/4AA376BF-48E1-4FC0-822F-E4BA062BBA3E/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 15:16:45.322 Cartela de Venda[16356:3855985] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Data/Application/1616ADD3-0150-4EB6-9573-F38ED9B71BFD/Library/Cookies/Cookies.binarycookies
+2014-12-03 15:16:45.718 Cartela de Venda[16356:3855985] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 15:16:45.719 Cartela de Venda[16356:3855985] Multi-tasking -> Device: YES, App: YES
+2014-12-03 15:16:45.729 Cartela de Venda[16356:3855985] Unlimited access to network resources
+2014-12-03 15:16:45.992 Cartela de Venda[16356:3855985] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 15:16:49.864 Cartela de Venda[16356:3855985] Resetting plugins due to page load.
+2014-12-03 15:16:50.690 Cartela de Venda[16356:3855985] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Bundle/Application/771F846F-9B5B-47DA-8F89-A23C7B6E3E5D/Cartela%20de%20Venda.app/www/index.html
+2014-12-03 15:50:08.424 Cartela de Venda[17209:3870767] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Data/Application/DFB8E5E2-D702-42C9-B8C2-E06D800AD1FF/Library/Cookies/Cookies.binarycookies
+2014-12-03 15:50:08.781 Cartela de Venda[17209:3870767] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-03 15:50:08.781 Cartela de Venda[17209:3870767] Multi-tasking -> Device: YES, App: YES
+2014-12-03 15:50:08.783 Cartela de Venda[17209:3870767] Unlimited access to network resources
+2014-12-03 15:50:08.806 Cartela de Venda[17209:3870767] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-03 15:50:10.000 Cartela de Venda[17209:3870767] Resetting plugins due to page load.
+2014-12-03 15:50:10.695 Cartela de Venda[17209:3870767] Finished load of: file:///Users/Bruno/Library/Developer/CoreSimulator/Devices/F7C06478-B659-45D4-A488-9D8352B3B6F1/data/Containers/Bundle/Application/15C1A3CD-21D9-4D42-B750-853178F8D83A/Cartela%20de%20Venda.app/www/index.html
