@@ -8,7 +8,7 @@ function main() {
 
 	// try to load from the localStorage
 	sheet.loadData();
-	render();
+	updateData();
 }
 
 function startWeek() {
@@ -18,11 +18,11 @@ function startWeek() {
 		var startDay = createDate($("#startDate").val());
 		var totalDays = longPeriodCtrl.isChecked() ? 15 : 7;
 		sheet.initialize(normalTarget, bestTarget, startDay, totalDays, []);
-		render();
+		updateData();
 		tabCtrl.setActiveTab(0,{animation:'slide'});
 	}
 	
-	function render() {
+	function updateData() {
 
 		if (sheet.data != null) {
 
@@ -30,21 +30,16 @@ function startWeek() {
 			this.weekInfo.normalTarget = sheet.data.normalTarget;
 			this.weekInfo.bestTarget = sheet.data.bestTarget;
 			this.weekInfo.longPeriod = sheet.data.totalDays == 15;
-			this.weekInfo.startDate = formatDate(createDate(sheet.data.startDay));
+			this.weekInfo.startDate = formatDate(sheet.data.startDay);
 
 			// set daily info
 			this.targets = sheet.data.targets;
 		} 
 	}
 
-	function formatDate(dt) {
-		var day = dt.getDay() < 10 ? "0" + dt.getDay() : dt.getDay();
-		return dt.getFullYear() + "-" + dt.getMonth() + "-" + day;
-	}
-
 	function setSoldDay(day, value) {
 		sheet.setSoldValue(day, value);
-		render();
+		updateData();
 		sheet.saveDate();
 	}
 	
@@ -52,7 +47,7 @@ function startWeek() {
 	function setDay(value){
 	
 		sheet.setSoldValue(currentDaySetup, value);
-		render();
+		updateData();
 		var scope = angular.element(document.getElementById("dayList")).scope();
 		scope.targets = this.targets;
 		scope.$apply();
@@ -78,6 +73,7 @@ function startWeek() {
 		event.target.checked = weekInfo.longPeriod;
 	});
 		
+	main();
 	ons.bootstrap()
 	.controller("listController", function ($scope ) {
 		$scope.targets = targets;
@@ -86,8 +82,9 @@ function startWeek() {
 		}
 	})
 	.controller("weekSetupController", function ($scope, $rootScope) {
-		$scope.weekInfo = weekInfo;
-		$("#start_date").val(weekInfo.startDate);
+		if (weekInfo.startDate) {
+			$scope.weekInfo = weekInfo;
+			$("#startDate").val(weekInfo.startDate);
+		}
 	});
 
-main();
