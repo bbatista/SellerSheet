@@ -44,3 +44,6 @@ Temporary Items
 
 # Swap files
 *.swp
+
+# Exclude the platforms building files
+platforms/*
