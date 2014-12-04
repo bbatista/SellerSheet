@@ -7,8 +7,8 @@ function SheetCalculator(normalTarget, bestTarget, startDay, totalDays, daysOff)
 	if (daysOff instanceof Array === false)	throw "The param daysOff must be of type Array";
 
 	// constants to help
-	this.daysName = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-	this.months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+	this.daysName = ['Domingo', 'Segunda', 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sabado'];
+	this.months = ['Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
 	this.normalTarget = normalTarget;
 	this.bestTarget = bestTarget;
