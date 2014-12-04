@@ -15,7 +15,7 @@ function startWeek() {
 
 		var normalTarget = parseInt($("#normalTarget").val());
 		var bestTarget = parseInt($("#bestTarget").val());
-		var startDay = new Date($("#startDate").val() + " 00:00:00");
+		var startDay = createDate($("#startDate").val());
 		var totalDays = longPeriodCtrl.isChecked() ? 15 : 7;
 		sheet.initialize(normalTarget, bestTarget, startDay, totalDays, []);
 		render();
@@ -30,7 +30,7 @@ function startWeek() {
 			this.weekInfo.normalTarget = sheet.data.normalTarget;
 			this.weekInfo.bestTarget = sheet.data.bestTarget;
 			this.weekInfo.longPeriod = sheet.data.totalDays == 15;
-			this.weekInfo.startDate = formatDate(new Date(sheet.data.startDay));
+			this.weekInfo.startDate = formatDate(createDate(sheet.data.startDay));
 
 			// set daily info
 			this.targets = sheet.data.targets;
