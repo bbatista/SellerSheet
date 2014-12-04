@@ -20,7 +20,9 @@ SellerSheet.prototype.initialize = function(normalTarget, bestTarget, startDay, 
 SellerSheet.prototype.setSoldValue = function(day, value) {
 		
 	this.data.targets[day].sold = value;
-	this._recalculate(day+1);
+	var nextDay = parseInt(day)+1;
+	if (nextDay < this.data.totalDays)
+		this._recalculate(parseInt(day)+1);
 }
 
 // save data in the local storage
@@ -58,8 +60,10 @@ SellerSheet.prototype._recalculate = function(fromDay) {
 	
 	//redistribute the values
 	var i = 0;
-	for (var day = fromDay;day<this.data.totalDays-1;day++) {
-		this.data.targets[day] = newSheet.targets[i];
+	for (var day = fromDay;day<this.data.totalDays;day++) {
+		//this.data.targets[day] = newSheet.targets[i];
+		this.data.targets[day].normal = newSheet.targets[i].normal;
+		this.data.targets[day].best = newSheet.targets[i].best;
 		i++;
 	}
 }
