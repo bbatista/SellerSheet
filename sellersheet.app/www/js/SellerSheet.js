@@ -36,6 +36,10 @@ SellerSheet.prototype.loadData = function() {
 	var dataString = localStorage.getItem("seller_sheet");
 	if (dataString != "") {
 		this.data = JSON.parse(dataString);
+		this.data.startDay = new Date(this.data.startDay_str);
+		for (var i = 0; i<this.data.targets.length; i++) {
+			this.data.targets[i].date = new Date(this.data.targets[i].date_str);
+		}
 		return true;
 	}
 

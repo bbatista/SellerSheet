@@ -67,6 +67,7 @@ SheetCalculator.prototype.getSheetData = function() {
 		target.month = this.months[this.normalDailyTargets[i].date.getMonth()];
 		target.day = this.normalDailyTargets[i].day;
 		target.date = this.normalDailyTargets[i].date;
+		target.date_str = formatDate(this.normalDailyTargets[i].date, true);
 		target.normal = this.normalDailyTargets[i].value;
 		target.best = this.bestDailyTargets[i].value;
 		target.sold = 0;
@@ -78,6 +79,7 @@ SheetCalculator.prototype.getSheetData = function() {
 			'bestTarget': this.bestTarget,
 			'totalDays': this.totalDays,
 			'startDay': this.startDay,
+			'startDay_str': formatDate(this.startDay, true),
 			'daysOff': this.daysOff,
 			'targets': targets
 		};

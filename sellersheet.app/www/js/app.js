@@ -19,6 +19,7 @@ function startWeek() {
 		var totalDays = longPeriodCtrl.isChecked() ? 15 : 7;
 		sheet.initialize(normalTarget, bestTarget, startDay, totalDays, []);
 		updateData();
+		sheet.saveData();
 		tabCtrl.setActiveTab(0,{animation:'slide'});
 	}
 	
